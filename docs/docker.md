@@ -1299,7 +1299,7 @@ $ docker swarm leave [--force]
 <br/>
 
 
-# 사용 사례 소개
+# 개발 활용 소개
 
 
 
@@ -1313,8 +1313,10 @@ Running as an arbitrary user
 
 ```
 $ mkdir data
+
 $ ls -lnd data
 drwxr-xr-x 2 1000 1000 4096 Aug 27 15:54 data
+
 $ docker run -v "$PWD/data":/var/lib/mysql --user 1000:1000 --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:ta
 ```
 
