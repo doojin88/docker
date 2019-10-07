@@ -7,5 +7,5 @@ COPY docker/entrypoint.sh /usr/local/bin/
 RUN ln -s usr/local/bin/entrypoint.sh /entrypoint.sh # backwards compat
 ENTRYPOINT ["entrypoint.sh"]
 
-EXPOSE 8080
+EXPOSE 8888
 CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","demoapp1-1.0.jar"]
