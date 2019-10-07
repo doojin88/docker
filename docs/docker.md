@@ -254,6 +254,10 @@ ngnix 서버 실행
 ```bash
 $ docker run --detach --publish=8000:80 --name=webserver nginx
 
+$ docker image ls
+
+$ docker container ls
+
 ```
 
 > check: http://localhost:8000/
