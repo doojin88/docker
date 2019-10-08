@@ -1339,11 +1339,48 @@ $ docker exec -i some-mysql sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' <
 
 
 
-## (2) 개발툴 연동
+## (2) 자바 개발툴 연동
 
-- https://github.com/docker/labs/tree/master/developer-tools/
+참고 :
+
+- https://github.com/docker/labs/tree/master/developer-tools/java
+- https://github.com/doojin88/docker/tree/master/examples/demoapp1
 
 
+
+리모트 디버깅 
+
+- 프로그램 실행 :
+
+- ```
+  $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar target/demoapp1-1.0.jar
+
+  ```
+  
+- IDE 디버그 연결 :  
+
+<div align='center'><img width="700" src="./imgs/image-20191008135853450.png"></div>
+
+
+Docker 를 이용한 디버깅
+
+- Dockerfile
+
+- ```
+  FROM openjdk:8u212-jdk
+  RUN mkdir -p /app
+  COPY target/demoapp1-1.0.jar /app
+  WORKDIR /app
+  
+  #COPY docker/entrypoint.sh /usr/local/bin/
+  #RUN ln -s usr/local/bin/entrypoint.sh /entrypoint.sh # backwards compat
+  #ENTRYPOINT ["entrypoint.sh"]
+  
+  EXPOSE 8888
+  CMD ["java","-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005","-Djava.security.egd=file:/dev/./urandom","-jar","/app/demoapp1-1.0.jar"]
+  ```
+
+  
 
 
 
