@@ -45,11 +45,19 @@ $ docker exec -i some-mysql sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' <
 참고 :
 
 - https://github.com/docker/labs/tree/master/developer-tools/java
+
+
+
+자바 샘플 
+
 - https://github.com/doojin88/docker/tree/master/examples/demoapp1
 
 
 
 리모트 디버깅 
+
+- 참고
+  - https://docs.oracle.com/javase/8/docs/technotes/guides/jpda/conninv.html#Invocation
 
 - 프로그램 실행 :
 
@@ -60,8 +68,11 @@ $ docker exec -i some-mysql sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' <
   
 - IDE 디버그 연결 :  
 
-<div align='center'><img width="700" src="./imgs/image-20191008135853450.png"></div>
-Docker 를 이용한 디버깅
+<div align='center'><img width="600" src="./imgs/image-20191008135853450.png"></div>
+
+
+
+Docker 를 이용한 디버깅 
 
 - Dockerfile
 
@@ -75,10 +86,11 @@ Docker 를 이용한 디버깅
   #RUN ln -s usr/local/bin/entrypoint.sh /entrypoint.sh # backwards compat
   #ENTRYPOINT ["entrypoint.sh"]
   
-  EXPOSE 8888
+  EXPOSE 8888 5005
+  
   CMD ["java","-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005","-Djava.security.egd=file:/dev/./urandom","-jar","/app/demoapp1-1.0.jar"]
-  ```
-
+```
+  
   
 
 
