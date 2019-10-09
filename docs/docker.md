@@ -57,20 +57,24 @@
   - 오케스트레이션
   - 서비스 배포 및 운영에 필요한 것
   - kubernetes (k8s), helm, ...
-- 스터디 동안 배운 것
-  - devops 관련
-  - terraform
-  - azure devops
-  - aws ci/cd
-  - kubernetes
 
 
 
-# 스터디를 통해 느낀 DevOps
+# 스터디를 통해 느낀 점
 
 
 
-## (1) 업무 흐름 및 조직의 변화
+## (1) 스터디 동안 학습한 것
+
+- devops 관련
+- terraform
+- azure devops
+- aws ci/cd
+- kubernetes
+
+
+
+## (2) 업무 흐름 및 조직의 변화
 
 
 |                        조직 구조 변화                        |                        업무 프로세스                         |
@@ -85,7 +89,7 @@
 
 
 
-## (2) DevOps Tools
+## (3) DevOps Tools
 
 <div align='center'><img width="750" src="https://qph.fs.quoracdn.net/main-qimg-877f2aae5ae85b69ce41f7d71d56cd14"></div>
 > 출처 : https://www.channelfutures.com/strategy/devops-the-secret-to-doing-more-faster-better-and-for-less-green
@@ -226,6 +230,15 @@ Docker Architecture
   2. 로그아웃하고 다시 로긴한다.
 
 
+
+- 시스템 리부트
+
+- ```
+  $ sudo reboot
+  
+  ```
+
+  
 
 
 
@@ -1360,7 +1373,6 @@ $ docker exec -i some-mysql sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' <
 - IDE 디버그 연결 :  
 
 <div align='center'><img width="700" src="./imgs/image-20191008135853450.png"></div>
-
 
 Docker 를 이용한 디버깅
 
