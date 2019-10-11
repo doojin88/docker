@@ -661,6 +661,8 @@ $ docker image ls
 <실습>
 
 ```
+$ docker volume ls
+
 $ docker volume create <볼류명>
 
 $ docker volume ls
