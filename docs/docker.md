@@ -580,6 +580,12 @@ $ docker container ls -a
 ```
 $ docker container ls
 
+$ docker container prune
+
+$ docker run -d -p 8080:8080 --name hello1 hello
+
+$ docker container ls
+
 $ docker exec -it hello1 bash
 root# 
 ```
@@ -611,8 +617,20 @@ root#
 
 Local image 저장 및 복구
 ```bash
-$ docker save spring-boot-app -o spring-boot-app.tar
-$ docker load -i spring-boot-app.tar
+$ docker pull nginx
+
+$ docker image ls
+
+$ docker image save nginx -o nginx.tar
+
+$ docker image rm nginx
+
+$ docker image ls
+
+$ docker image load -i nginx.tar
+
+$ docker image ls
+
 ```
 
 
