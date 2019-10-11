@@ -300,7 +300,7 @@ hello-world 실행
   <div align='center'><img width="600" src="https://training.play-with-docker.com/images/ops-basics-hello-world.svg"></div>
   
 > 출처 : https://training.play-with-docker.com/ops-s1-hello/
-  
+
   
 
 Doing More With Docker Images:
@@ -447,7 +447,7 @@ CMD ["python", "app.py"]
 
 <br/>
 
-# Docker CLI
+# Docker Command
 
 
 
