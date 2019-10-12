@@ -214,7 +214,7 @@ Docker Architecture
 
   - 스크립트 내용를 자세히 살펴보고 **주의**할 것.
 
-  ```
+  ```bash
   $ curl -fsSL https://get.docker.com -o get-docker.sh
   
   $ sudo sh get-docker.sh
@@ -227,7 +227,7 @@ Docker Architecture
 
   1. 사용자를 `docker` group에 추가
 
-  ```
+  ```bash
   $ sudo usermod -aG docker $USER
    
   ```
@@ -237,8 +237,18 @@ Docker Architecture
 
 - 시스템 리부트
 
-- ```
+- ```bash
   $ sudo reboot
+  
+  ```
+<br/>
+
+- docker-compose 설치
+
+- ```bash
+  $ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  
+  $ sudo chmod +x /usr/local/bin/docker-compose
   
   ```
 
